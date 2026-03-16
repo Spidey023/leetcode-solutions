@@ -3,11 +3,11 @@
  * @return {number[]}
  */
 var runningSum = function(nums) {
-    let prefix= new Array(nums.length)
+    let prefix= []
     let sum=0
     for(let i=0;i<nums.length;i++){
-        sum=sum+nums[i]
-        prefix[i]=sum
+        sum+=nums[i]
+        prefix.push(sum)
     }
     return prefix
 };
